@@ -23,7 +23,7 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd jirachaya/HolidayTravelVehicles 
+        cd Jirachaya/HolidayTravelVehicles 
         javac -d . *.java
       # Compile java file from directory
     - name: Run Java Main Class
