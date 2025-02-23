@@ -26,3 +26,7 @@ jobs:
         cd Punyanuch/HolidayTravelVehicles 
         javac -d . *.java
       # Compile java file from directory
+    - name: Run Java Main Class
+      run: |
+        cd Punyanuch/HolidayTravelVehicles  
+        java Main  
