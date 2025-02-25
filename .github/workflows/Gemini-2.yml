@@ -26,3 +26,8 @@ jobs:
         cd Rittichon_Phonrat/HolidayTravelVehicles 
         javac -d . *.java
       # Compile java file from directory
+
+    - name: Run Main Class
+      run: |
+        cd Rittichon_Phonrat/HolidayTravelVehicles
+        java MainClassName
