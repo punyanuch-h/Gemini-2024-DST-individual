@@ -30,4 +30,5 @@ jobs:
     - name: Run Main Class
       run: |
         cd Rittichon_Phonrat/HolidayTravelVehicles
-        java MainClassName
+        java -cp . MainClassName
+
