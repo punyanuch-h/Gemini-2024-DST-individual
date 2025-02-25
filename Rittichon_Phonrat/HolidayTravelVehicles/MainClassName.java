@@ -1,7 +1,7 @@
 package Rittichon_Phonrat.HolidayTravelVehicles;
 
 
-public class Main {
+public class MainClassName {
     public static void main(String[] args) {
         // ตัวอย่างการสร้าง Manufacturer
         Manufacturer manufacturer = new Manufacturer("M001", "Toyota", "1234 Main St", "123-456-7890");
