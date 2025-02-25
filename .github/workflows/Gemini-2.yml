@@ -1,29 +1,28 @@
-name: Java Build and Run
+name: Java CI
 
 on:
   push:
     branches:
-      - main
+      - Rittichon_Phonrat
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+        fetch-depth: ${{ env.PR_FETCH_DEPTH }}
 
-      - name: Set up JDK 11
-        uses: actions/setup-java@v1
-        with:
-          java-version: '11'
+    - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11' # You can change this to the version you want
 
-      - name: Compile Java code
-        run: |
-          cd Rittichon_Phonrat/HolidayTravelVehicles
-          javac -d . MainClassName.java
-
-      - name: Run Java application
-        run: |
-          cd Rittichon_Phonrat/HolidayTravelVehicles
-          java -cp . Rittichon_Phonrat.HolidayTravelVehicles.MainClassName
+    - name: Compile Java
+      run: |
+        cd Rittichon_Phonrat/HolidayTravelVehicles 
+        javac -d . *.java
+      # Compile java file from directory
