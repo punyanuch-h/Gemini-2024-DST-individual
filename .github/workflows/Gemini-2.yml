@@ -23,8 +23,13 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd Rittichon_Phonrat/HolidayTravelVehicles 
-        javac -d . *.java
+        cd Rittichon_Phonrat/HolidayTravelVehicles
+        javac -d . MainClassName.java
+
+    - name: List compiled files
+      run: |
+        cd Rittichon_Phonrat/HolidayTravelVehicles
+        ls -l # แสดงไฟล์ที่คอมไพล์แล้ว
 
     - name: Run Main Class
       run: |
