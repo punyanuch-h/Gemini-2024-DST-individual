@@ -19,14 +19,14 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v1
       with:
-        java-version: '11'
+        java-version: '11' 
 
     - name: Compile Java
       run: |
         cd Rittichon_Phonrat/HolidayTravelVehicles 
-        javac -d . MainClassName.java # คอมไพล์ไฟล์ MainClassName.java
+        javac -d . *.java 
 
     - name: Run Main Class
       run: |
         cd Rittichon_Phonrat/HolidayTravelVehicles
-        java -cp . MainClassName # รัน MainClassName จาก directory ปัจจุบัน
+        java -cp . MainClassName 
