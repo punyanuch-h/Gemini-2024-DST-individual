@@ -1,9 +1,9 @@
-name: Java CI
+name: Build and Test Java Project
 
 on:
   push:
     branches:
-      - Rittichon_Phonrat
+      - main
 
 jobs:
   build:
@@ -12,26 +12,14 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      with:
-        ref: ${{ github.event.pull_request.head.ref }}
-        fetch-depth: ${{ env.PR_FETCH_DEPTH }}
 
-    - name: Set up JDK
+    - name: Set up JDK 11
       uses: actions/setup-java@v1
       with:
         java-version: '11'
 
-    - name: Compile Java
-      run: |
-        cd Rittichon_Phonrat/HolidayTravelVehicles
-        javac -d . MainClassName.java
+    - name: Compile Java code
+      run: javac -d . Rittichon_Phonrat/HolidayTravelVehicles/MainClassName.java
 
-    - name: List compiled files
-      run: |
-        cd Rittichon_Phonrat/HolidayTravelVehicles
-        ls -l # แสดงไฟล์ที่คอมไพล์แล้ว
-
-    - name: Run Main Class
-      run: |
-        cd Rittichon_Phonrat/HolidayTravelVehicles
-        java -cp . MainClassName
+    - name: Run Java program
+      run: java -cp . Rittichon_Phonrat.HolidayTravelVehicles.MainClassName
