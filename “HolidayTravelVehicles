@@ -1,0 +1,52 @@
+class Customer {
+    private int id;
+    private String name;
+    private String address;
+    private String phoneNumber;
+
+    // Constructor, Getters, and Setters
+}
+
+class Salesperson {
+    private int id;
+    private String name;
+
+    // Constructor, Getters, and Setters
+}
+
+class Vehicle {
+    private String serialNumber;
+    private String name;
+    private String model;
+    private int year;
+    private double price;
+
+    // Constructor, Getters, and Setters
+}
+
+class TradeInVehicle {
+    private String seminarNumber;
+    private String make;
+    private String model;
+    private int year;
+
+    // Constructor, Getters, and Setters
+}
+
+class DealerInstalledOption {
+    private String optionCode;
+    private String description;
+    private double price;
+    private int year;
+
+    // Constructor, Getters, and Setters
+}
+
+class SalesInvoice {
+    private String invoiceNumber;
+    private String date;
+    private double price;
+    private double tax;
+
+    // Constructor, Getters, and Setters
+}
