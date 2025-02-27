@@ -23,6 +23,10 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd Patchadaporn/HolidayTravelVehicles 
+        cd Patchadaporn/HolidayTravelVehicles
         javac -d . *.java
-      # Compile java file from directory
+
+    - name: Run MainClassName
+      run: |
+        cd Rittichon_Phonrat/HolidayTravelVehicles
+        java Patchadaporn.HolidayTravelVehicles.Main
